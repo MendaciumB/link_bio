@@ -8,7 +8,7 @@ ENV PATH="${VIRTUAL_ENV}/bin:$PATH"
 RUN python3.12 -m venv ${VIRTUAL_ENV}
 
 RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r requirements.text
+RUN pip install --no-cache-dir -r requirements.txt
 
 
 CMD reflex run --env prod --backend-only
