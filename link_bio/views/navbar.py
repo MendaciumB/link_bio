@@ -23,10 +23,10 @@ def navbar() -> rx.Component:
             ),
             href=Route.INDEX.value
         ),
-        float_button(
-            icon=rx.image(src="/icons/donate.svg"),
-            href=const.COFFEE_URL
-        ),
+        #float_button(
+        #    icon=rx.image(src="/icons/donate.svg"),
+        #    href=const.COFFEE_URL
+        #),
         position="sticky",
         bg=Color.CONTENT.value,
         padding_x=styles.Size.BIG.value,
