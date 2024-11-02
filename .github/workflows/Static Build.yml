@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    if: github.repository == 'MendaciumB/link_bio
+    if: github.repository == 'MendaciumB/link_bio'
     runs-on: ubuntu-latest
 
     permissions:
