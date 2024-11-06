@@ -7,6 +7,7 @@ from ..views.sponsors import sponsors
 from ..styles import styles
 from .. import utils
 from ..routes import Route
+from ..state.PageState import PageState
 
 
 @rx.page(
@@ -14,7 +15,8 @@ from ..routes import Route
         title=utils.courses_title,
         description=utils.courses_description,
         image=utils.preview,
-        meta=utils.courses_meta
+        meta=utils.courses_meta,
+        on_load=PageState.check_live
 )
 def courses() -> rx.Component:
     return rx.box(
@@ -22,7 +24,7 @@ def courses() -> rx.Component:
         navbar(),
         rx.center(
             rx.vstack(
-                header(details=False),
+                header(details=False, live=PageState.is_live),
                 courses_links(),
                 sponsors(),
                 align="center",
@@ -34,4 +36,3 @@ def courses() -> rx.Component:
         ),
         footer(),
     )
-

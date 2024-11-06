@@ -5,21 +5,24 @@ from ..components.info_text import info_text
 from ..styles.colors import TextColor
 from ..styles.colors import Color
 from .. import constants as const
+from ..styles.styles import Size
 
-def header(details = True) -> rx.Component:
+def header(details=True, live=False) -> rx.Component:
     return rx.vstack(
         rx.hstack(
-            rx.avatar(
-                name="Brais Moure", 
-                size="7",
-                src="/avatar.jpg",
-                color=TextColor.BODY.value,
-                bg=Color.CONTENT.value,
-                padding="2px",
-                border="4px",
-                border_color=Color.PRIMARY.value,
-                radius="full"
-
+            rx.cond(
+                live,
+                rx.avatar(
+                    name="Brais Moure", 
+                    size="7",
+                    src="/avatar.jpg",
+                    color=TextColor.BODY.value,
+                    bg=Color.CONTENT.value,
+                    padding="2px",
+                    border="4px",
+                    border_color=Color.PRIMARY.value,
+                    radius="full"
+                ),
             ),
             rx.vstack(
                 rx.heading("BRAIS MOURE"),

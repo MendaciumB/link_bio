@@ -3,10 +3,8 @@ from .styles import styles
 from . import constants as const
 from .pages.index import index
 from .pages.courses import courses
-
-
-class State(rx.State):
-    """ Define your app state here."""
+from .api.api import repo
+from .api.api import live
 
 
 app = rx.App(
@@ -24,3 +22,6 @@ gtag('config', 'G-3YGHT3XJFS');
         )
     ]
 )
+
+app.api.add_api_route("/hello", repo)
+app.api.add_api_route("/live/{user}", live)

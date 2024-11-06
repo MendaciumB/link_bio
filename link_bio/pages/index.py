@@ -7,6 +7,7 @@ from ..views.sponsors import sponsors
 from ..styles import styles
 from .. import utils
 from ..routes import Route
+from ..state.PageState import PageState
 
 
 @rx.page(
@@ -14,7 +15,8 @@ from ..routes import Route
         title=utils.index_title,
         description=utils.index_description,
         image=utils.preview,
-        meta=utils.index_meta
+        meta=utils.index_meta,
+        on_load=PageState.check_live
 )
 def index() -> rx.Component:
     return rx.box(
@@ -22,7 +24,7 @@ def index() -> rx.Component:
         navbar(),
         rx.center(
             rx.vstack(
-                header(),
+                header(live=PageState.is_live),
                 index_links(),
                 sponsors(),
                 align="center",
@@ -34,4 +36,3 @@ def index() -> rx.Component:
         ),
         footer(),
     )
-
