@@ -11,5 +11,5 @@ config = rx.Config(
     ],
     #backend_host="http://localhost:8000",
     #backend_port=8000,
-    #api_url="http://localhost:8000"
+    api_url="https://link-bio-if4n.onrender.com"
 )
