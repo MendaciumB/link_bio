@@ -9,7 +9,7 @@ config = rx.Config(
         "http://localhost:8001",
         "https://link-bio-if4n.onrender.com"
     ],
-    backend_host="https://link-bio-if4n.onrender.com",
+    #backend_host="https://link-bio-if4n.onrender.com",
     #backend_port=8000,
     #api_url="http://localhost:8000"
 )
