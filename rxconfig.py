@@ -5,6 +5,7 @@ config = rx.Config(
     cors_allowed_origins=[
         "http://localhost:3000",
         "http://localhost:3001",
+        "https://firts-link-bio.vercel.app"
         #"http://localhost:8000",
         #"http://localhost:8001",
         #"https://link-bio-if4n.onrender.com"
