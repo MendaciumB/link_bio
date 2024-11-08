@@ -5,9 +5,9 @@ config = rx.Config(
     cors_allowed_origins=[
         "http://localhost:3000",
         "http://localhost:3001",
-        "http://localhost:8000",
-        "http://localhost:8001",
-        "https://link-bio-if4n.onrender.com"
+        #"http://localhost:8000",
+        #"http://localhost:8001",
+        #"https://link-bio-if4n.onrender.com"
     ],
     #backend_host="https://link-bio-if4n.onrender.com",
     #backend_port=8000,
